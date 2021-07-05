@@ -20,6 +20,9 @@ const Header = () => {
         <NavLink to="/about" className="link" activeClassName="active">
           About
         </NavLink>
+        <NavLink to="/feedback" className="link" activeClassName="active">
+          Feedback
+        </NavLink>
       </div>
     </header>
   );

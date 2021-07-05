@@ -8,6 +8,7 @@ import EditEvent from '../components/EditEvent';
 import EventsContext from '../context/EventsContext';
 import { About } from '../components/About';
 import { Home } from '../components/Home';
+import Feedback from '../components/Feedback';
 
 const AppRouter = () => {
   const [books, setBooks] = useLocalStorage('books', []);
@@ -24,6 +25,7 @@ const AppRouter = () => {
               <Route component={EventsList} path="/eventList" exact={true} />
               <Route component={AddEvent} path="/add" />
               <Route component={EditEvent} path="/edit/:id" />
+              <Route component={Feedback} path="/feedback"/>
               <Route component={() => <Redirect to="/" />} />
             </Switch>
           </EventsContext.Provider>
@@ -34,3 +36,5 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
+
+
